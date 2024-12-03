@@ -5,7 +5,7 @@ A beautiful videogame couple project, made in Unity with love <3
 ### Stanza "checkpoint":
 - Ogni segreto scoperto/oggetto speciale ottenuto viene esposto nella stanza come trofeo/poster
 
-### Computer/schermo nella stanza checkpoint che ti permette di visualizzare l'inventario di armi disponibili o comprabili con punti che che ti fornisce indizi su come affrontare i vari livelli/arene:
+### Sogno che descrive come affrontare ogni livello + cassettiera sotto al lett con armi etc..:
  - Menu con inventario da un lato e obiettivi dall'altro
 
 ### Alternanza tra livelli-arena (combattimento) e livelli-storia:
