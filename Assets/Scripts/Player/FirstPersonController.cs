@@ -11,18 +11,18 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private float walkSpeed = 5.0f;
     [SerializeField] private float sprintMultiplier = 2.0f;
 
-    [Header("Jump Parameters")]
-    [SerializeField] private float jumpForce = 5.0f;
-    [SerializeField] private float gravityMultiplier = 1.0f;
+    // [Header("Jump Parameters")]
+    // [SerializeField] private float jumpForce = 5.0f;
+    // [SerializeField] private float gravityMultiplier = 1.0f;
 
     [Header("Look Parameters")]
     [SerializeField] private float mouseSensivity = 0.4f;
     [SerializeField] private float upDownLookRange = 60f;
 
     [Header("References")]
-    [SerializeField] private CharacterController characterController;
-    [SerializeField] private Camera playerCamera;
-    [SerializeField] private PlayerInputHandler playerInputHandler; // vedere /Scripts/Player/PlayerInputHandler.cs
+    [SerializeField] private CharacterController characterController; // inserire il modulo Character Controller
+    [SerializeField] private Camera playerCamera; // inserire il nodo PlayerCamera
+    [SerializeField] private playerInputHandler playerInputHandler; // inserire /Scripts/Player/PlayerInputHandler.cs
 
     private Vector3 currentMovement;
     private float verticalView;
@@ -34,7 +34,7 @@ public class FirstPersonController : MonoBehaviour
         Cursor.visible = false;
     }
 
-    private void Update()
+    void FixedUpdate()
     {
         HandleMovement();
         HandleView();
@@ -47,22 +47,23 @@ public class FirstPersonController : MonoBehaviour
         return worldDirection.normalized;
     }
 
+    /* 
+    // VEDERE AnimationStateController.cs:
+    // SALTO FISICO SOSTITUITO CON ANIMAZIONE DEL SALTO!
     private void HandleJumping()
     {
         if (characterController.isGrounded)
         {
             currentMovement.y = -0.5f;
 
-            if (PlayerInputHandler.JumpTriggered)
+            if (playerInputHandler.JumpTriggered)
             {
                 currentMovement.y = jumpForce;
             }
-        }
-        else
-        {
+        } else {
             currentMovement.y += Physics.gravity.y * gravityMultiplier * Time.deltaTime;
         }
-    }
+    } */
 
     private void HandleMovement()
     {
@@ -70,7 +71,7 @@ public class FirstPersonController : MonoBehaviour
         currentMovement.x = worldDirection.x * CurrentSpeed;
         currentMovement.z = worldDirection.z * CurrentSpeed;
 
-        HandleJumping();
+        // HandleJumping();
         characterController.Move(currentMovement * Time.deltaTime);
     }
 

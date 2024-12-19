@@ -5,10 +5,10 @@ using UnityEngine.InputSystem;
 
 // codice ispirato a: https://www.youtube.com/watch?v=vBWcb_0HF1c
 
-public class PlayerInputHandler : MonoBehaviour
+public class playerInputHandler : MonoBehaviour
 {
     [Header("Input Action Asset")]
-    [SerializeField] private InputActionAsset playerControls; // utilizzato poi per riferirsi a /Inputs/PlayerInput.inputactions
+    [SerializeField] private InputActionAsset playerControls; // inserire /Inputs/PlayerInput.inputactions
 
     [Header("Action Map Name Reference")] // NOMI DELLE ACTION MAP CONTENUTE IN /Inputs/PlayerInput.inputactions
     [SerializeField] private string characterActionMapName = "Character";
