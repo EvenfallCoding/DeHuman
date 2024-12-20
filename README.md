@@ -1,32 +1,33 @@
 ## DeHuman
-### A beautiful videogame couple project, made in Unity with love <3
+### DeHuman non è solo uno sparatutto sci-fi in prima persona, dinamico e con una storia emozionante
+### Ma è anche un progetto di coppia, a cui entrambi dedichiamo tempo, energie e amore ❤️
 
 ---
 
 ### IDEE:
 #### Stanza "checkpoint":
- - Ogni segreto scoperto o oggetto speciale ottenuto viene esposto nella stanza come trofeo o poster da parete. 🏆
+ - Ogni segreto scoperto o oggetto speciale ottenuto viene esposto nella stanza come trofeo o poster da parete.
 
 #### Sogno che descrive come affrontare ogni livello 
- - Rappresentazione boss livello e tasks specifici da completare. 👾
+ - Rappresentazione boss livello e tasks specifici da completare.
 
 #### Cassettiera sotto al letto con armi e potenziamenti pre-livello:
- - Apre un menù con inventario da un lato e obiettivi dall'altro. 🎯
+ - Apre un menù con inventario da un lato e obiettivi dall'altro.
 
 #### Alternanza tra livelli-arena (combattimento) e livelli-storia:
- - Storia nostalgica ma che ti spinge a provare rabbia/rancore. 😡
- - In un livello sarebbe interessante che il boss finale di un'arena sia una persona cara al personaggio (fidanzato/a, migliore amico/a, etc.). L'idea trae ispirazione da **Gantz**. 💔
+ - Storia nostalgica ma che ti spinge a provare rabbia/rancore.
+ - In un livello sarebbe interessante che il boss finale di un'arena sia una persona cara al personaggio (fidanzato/a, migliore amico/a, etc.). L'idea trae ispirazione da **Gantz**.
 
 #### Meccaniche di gioco:
  - Il giocatore deve vivere ogni arena con l'obiettivo di:
-   - Sopravvivere. 🛡️
-   - Uccidere più nemici possibili. 💥
-   - Sconfiggere il boss finale. 👹
- - Il giocatore deve percepire il poco valore della vita umana, ma al contempo l'istinto umano di combattere per sopravvivere. ⚔️
- - Alla fine di ogni livello, il giocatore ottiene una quantità di punti proporzionale alla quantità di nemici sconfitti. 🏅
+   - Sopravvivere.
+   - Uccidere più nemici possibili.
+   - Sconfiggere il boss finale.
+ - Il giocatore deve percepire il poco valore della vita umana, ma al contempo l'istinto umano di combattere per sopravvivere.
+ - Alla fine di ogni livello, il giocatore ottiene una quantità di punti proporzionale alla quantità di nemici sconfitti.
 
 #### Visione del personaggio:
- - Il personaggio è in grado di vedere le **hitbox** e la **health-bar** dei nemici direttamente nella sua retina. 👁️
+ - Il personaggio è in grado di vedere le **hitbox** e la **health-bar** dei nemici direttamente nella sua retina.
 
 #### Armi con caratteristiche uniche:
  - **Gravity-gun**: schiaccia nemici e oggetti distruggibili sotto un peso enorme, lasciando sul suolo una sagoma residua (easter egg di Gantz). ⚒️
@@ -61,15 +62,13 @@
 ---
 
 ### SPUNTI STORIA
- - Il protagonista scopre informazioni riservate su alieni ed esperimenti su esseri umani (modifiche corporee, droghe, etc.). 🛸
- - I servizi segreti lo costringono a partecipare regolarmente a combattimenti contro alieni e umani geneticamente modificati. 👽
+ - Il protagonista scopre informazioni riservate su alieni ed esperimenti su esseri umani (modifiche corporee, droghe, etc.).
+ - I servizi segreti lo costringono a partecipare regolarmente a combattimenti contro alieni e umani geneticamente modificati.
  - Trova una fidanzata per cui sviluppa gradualmente un forte affetto, tuttavia:
-   - Non può rivelarle nulla perchè se dovesse farlo la sua testa esploderebbe, uccidendo sè stesso e chiunque gli sia vicino. 💥
- - Quando capisce di amarla è costretto a ucciderla in un livello-arena, dove lei è il boss finale. 😢
-   - Inizialmente, combatte per egoistico istinto di sopravvivenza. 🧠
-   - Dopo averla uccisa, realizza di aver bisogno di amare qualcuno e che avrebbe dovuto fare di tutto per proteggerla. 💔
- - Più avanti, scopre che i resti del corpo della ragazza vengono usati per clonarla, creando un "involucro vuoto" con le sue fattezze. 👤
-   - Questo distrugge le sue speranze in un valore intrinseco della vita, ma continua ad amare il clone come se fosse l'originale. 💖
- - Alla fine gli alieni conquistano la Terra? 🌍
-
----
+   - Non può rivelarle nulla perchè se dovesse farlo la sua testa esploderebbe, uccidendo sè stesso e chiunque gli sia vicino.
+ - Quando capisce di amarla è costretto a ucciderla in un livello-arena, dove lei è il boss finale.
+   - Inizialmente, combatte per egoistico istinto di sopravvivenza.
+   - Dopo averla uccisa, realizza di aver bisogno di amare qualcuno e che avrebbe dovuto fare di tutto per proteggerla.
+ - Più avanti, scopre che i resti del corpo della ragazza vengono usati per clonarla, creando un "involucro vuoto" con le sue fattezze.
+   - Questo distrugge le sue speranze in un valore intrinseco della vita, ma continua ad amare il clone come se fosse l'originale.
+ - Alla fine gli alieni conquistano la Terra?
