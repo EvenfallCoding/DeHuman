@@ -176,7 +176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Options
+  m_text: Option2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 08cbbbc37c3e63f4ea70ad29c92253c2, type: 2}
   m_sharedMaterial: {fileID: -8721881962768451228, guid: 08cbbbc37c3e63f4ea70ad29c92253c2, type: 2}
@@ -312,10 +312,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: De:Human
+  m_text: Options
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b994eed1f880313458a9e0e4e1fa70d2, type: 2}
-  m_sharedMaterial: {fileID: 9176932852804652935, guid: b994eed1f880313458a9e0e4e1fa70d2, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 08cbbbc37c3e63f4ea70ad29c92253c2, type: 2}
+  m_sharedMaterial: {fileID: -8721881962768451228, guid: 08cbbbc37c3e63f4ea70ad29c92253c2, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -404,7 +404,7 @@ GameObject:
   - component: {fileID: 590929622}
   - component: {fileID: 590929621}
   m_Layer: 5
-  m_Name: Play
+  m_Name: Option1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -473,19 +473,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 590929622}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2068988052}
-        m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: PlayBtn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &590929622
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -581,7 +569,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Play
+  m_text: Option1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 08cbbbc37c3e63f4ea70ad29c92253c2, type: 2}
   m_sharedMaterial: {fileID: -8721881962768451228, guid: 08cbbbc37c3e63f4ea70ad29c92253c2, type: 2}
@@ -818,7 +806,7 @@ GameObject:
   - component: {fileID: 1329012610}
   - component: {fileID: 1329012609}
   m_Layer: 5
-  m_Name: Quit
+  m_Name: Back
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -889,8 +877,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 2068988052}
-        m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: QuitBtn
+        m_TargetAssemblyTypeName: OptionsMenu, Assembly-CSharp
+        m_MethodName: BackBtn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -951,7 +939,7 @@ GameObject:
   - component: {fileID: 1362147919}
   - component: {fileID: 1362147918}
   m_Layer: 5
-  m_Name: Options
+  m_Name: Option2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1020,19 +1008,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1362147919}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2068988052}
-        m_TargetAssemblyTypeName: StartMenu, Assembly-CSharp
-        m_MethodName: OptionsBtn
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1362147919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1128,7 +1104,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Quit
+  m_text: Back
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 08cbbbc37c3e63f4ea70ad29c92253c2, type: 2}
   m_sharedMaterial: {fileID: -8721881962768451228, guid: 08cbbbc37c3e63f4ea70ad29c92253c2, type: 2}
@@ -1453,7 +1429,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2068988047}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8fbe8b5e0a2d3d64395b2d3cdde74499, type: 3}
+  m_Script: {fileID: 11500000, guid: 45403f6b90cf8e546a8f580a6501fc45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1660057539 &9223372036854775807
