@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 // codice ispirato a: https://www.youtube.com/watch?v=vBWcb_0HF1c
 
@@ -28,6 +29,19 @@ public class FirstPersonController : MonoBehaviour
     private float verticalView;
     private float CurrentSpeed => walkSpeed * (playerInputHandler.SprintTriggered ? sprintMultiplier : 1);
 
+    void Pause()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape)){
+            #if UNITY_STANDALONE
+                SceneManager.LoadSceneAsync("PauseMenu");
+
+            #endif
+            #if UNITY_EDITOR
+                SceneManager.LoadSceneAsync("PauseMenu");
+            #endif
+        }
+    }
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -38,6 +52,7 @@ public class FirstPersonController : MonoBehaviour
     {
         HandleMovement();
         HandleView();
+        Pause();
     }
 
     private Vector3 CalculateWorldDirection()
