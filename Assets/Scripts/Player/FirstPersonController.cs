@@ -1,10 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
-// codice ispirato a: https://www.youtube.com/watch?v=vBWcb_0HF1c
+// codice ispirato da: https://www.youtube.com/watch?v=vBWcb_0HF1c
 
 public class FirstPersonController : MonoBehaviour
 {
@@ -12,9 +9,9 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private float walkSpeed = 5.0f;
     [SerializeField] private float sprintMultiplier = 2.0f;
 
-    // [Header("Jump Parameters")]
-    // [SerializeField] private float jumpForce = 5.0f;
-    // [SerializeField] private float gravityMultiplier = 1.0f;
+    [Header("Jump Parameters")]
+    [SerializeField] private float jumpForce = 5.0f;
+    [SerializeField] private float gravityMultiplier = 1.0f;
 
     [Header("Look Parameters")]
     [SerializeField] private float mouseSensivity = 0.4f;
@@ -24,12 +21,13 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private CharacterController characterController; // inserire il modulo Character Controller
     [SerializeField] private Camera playerCamera; // inserire il nodo PlayerCamera
     [SerializeField] private playerInputHandler playerInputHandler; // inserire /Scripts/Player/PlayerInputHandler.cs
+    [SerializeField] private Animator animator; // inserire il modulo Animator
 
     private Vector3 currentMovement;
     private float verticalView;
     private float CurrentSpeed => walkSpeed * (playerInputHandler.SprintTriggered ? sprintMultiplier : 1);
 
-    void Pause()
+    void HandlePause()
     {
         if (Input.GetKeyDown(KeyCode.Escape)){
             #if UNITY_STANDALONE
@@ -48,11 +46,42 @@ public class FirstPersonController : MonoBehaviour
         Cursor.visible = false;
     }
 
-    void FixedUpdate()
+    void Update()
     {
-        HandleMovement();
         HandleView();
-        Pause();
+        HandleMovement();
+        HandleJumping();
+        HandlePause();
+    }
+
+    private void HandleJumping()
+    {
+        if (characterController.isGrounded) // i salti devono partire da terra (per evitare doppi salti in aria)
+        {
+            if (playerInputHandler.JumpTriggered) // premuto tasto per saltare
+            {
+                if (playerInputHandler.MovementInput.x == 0 && playerInputHandler.MovementInput.y == 0) // da fermo
+                {
+                    // currentMovement.y = -0.5f;
+                    animator.SetBool("isJumping", true);
+                    currentMovement.y = jumpForce;
+                }
+                else if (playerInputHandler.MovementInput.x > 0 || playerInputHandler.MovementInput.y > 0) // in camminata
+                {
+                    animator.SetBool("isJumpingWalking", true);
+                    currentMovement.y = jumpForce;
+                }
+            }
+            else // tasto per saltare non premuto
+            {
+                animator.SetBool("isJumping", false);
+                animator.SetBool("isJumpingWalking", false);
+            }
+        }
+        else // non sta toccando terra
+        {
+            currentMovement.y += Physics.gravity.y * gravityMultiplier * Time.deltaTime; // applica gravita
+        }
     }
 
     private Vector3 CalculateWorldDirection()
@@ -62,32 +91,28 @@ public class FirstPersonController : MonoBehaviour
         return worldDirection.normalized;
     }
 
-    /* 
-    // VEDERE AnimationStateController.cs:
-    // SALTO FISICO SOSTITUITO CON ANIMAZIONE DEL SALTO!
-    private void HandleJumping()
-    {
-        if (characterController.isGrounded)
-        {
-            currentMovement.y = -0.5f;
-
-            if (playerInputHandler.JumpTriggered)
-            {
-                currentMovement.y = jumpForce;
-            }
-        } else {
-            currentMovement.y += Physics.gravity.y * gravityMultiplier * Time.deltaTime;
-        }
-    } */
-
     private void HandleMovement()
     {
         Vector3 worldDirection = CalculateWorldDirection();
         currentMovement.x = worldDirection.x * CurrentSpeed;
         currentMovement.z = worldDirection.z * CurrentSpeed;
-
-        // HandleJumping();
-        characterController.Move(currentMovement * Time.deltaTime);
+        
+        if (playerInputHandler.MovementInput.x == 0 && playerInputHandler.MovementInput.y == 0) // fermo
+        {
+            animator.SetBool("isWalking", false);
+            animator.SetBool("isWalkingBackwards", false);
+            characterController.Move(currentMovement * Time.deltaTime);
+        }
+        if (playerInputHandler.MovementInput.x > 0 || playerInputHandler.MovementInput.y > 0) // camminata in avanti
+        {
+            animator.SetBool("isWalking", true);
+            characterController.Move(currentMovement * Time.deltaTime);
+        }
+        if (playerInputHandler.MovementInput.x < 0 || playerInputHandler.MovementInput.y < 0) // camminata indietro 
+        {
+            animator.SetBool("isWalkingBackwards", true);
+            characterController.Move(currentMovement * Time.deltaTime);
+        }
     }
 
     private void ApplyHorizontalView(float rotationAmount)

@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-// codice ispirato a: https://www.youtube.com/watch?v=vBWcb_0HF1c
+// codice ispirato da: https://www.youtube.com/watch?v=vBWcb_0HF1c
 
 public class playerInputHandler : MonoBehaviour
 {
