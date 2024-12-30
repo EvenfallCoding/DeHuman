@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 6020908818439872068}
   - component: {fileID: 8533959864406005727}
   m_Layer: 5
-  m_Name: RawImage
+  m_Name: Crosshair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -275,7 +275,7 @@ GameObject:
   - component: {fileID: 1845844918501606194}
   - component: {fileID: 669512584461982289}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: CrosshairCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -466,7 +466,7 @@ PrefabInstance:
       insertIndex: 1
       addedObject: {fileID: 5799966722649507175}
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: f37257612e2fb8d4cb2029ea66f32af5, type: 3}
-      insertIndex: -1
+      insertIndex: 2
       addedObject: {fileID: 2903492381719331873}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f37257612e2fb8d4cb2029ea66f32af5, type: 3}
@@ -478,9 +478,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f37257612e2fb8d4cb2029ea66f32af5, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8751929478501492498}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f37257612e2fb8d4cb2029ea66f32af5, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3365874846369397276}
   m_SourcePrefab: {fileID: 100100000, guid: f37257612e2fb8d4cb2029ea66f32af5, type: 3}
 --- !u!1 &7262861888607762546 stripped
 GameObject:
@@ -548,25 +545,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 5
   sprintMultiplier: 2
+  jumpForce: 5
+  gravityMultiplier: 1
   mouseSensivity: 0.4
   upDownLookRange: 60
   characterController: {fileID: 3253902423882642772}
   playerCamera: {fileID: 3205591753609423691}
   playerInputHandler: {fileID: 8440847382298277180}
---- !u!114 &3365874846369397276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7262861888607762546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7a0fae0643fedb4479377b2cbcffb319, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  animator: {fileID: 7210121785252609248}
-  playerInputHandler: {fileID: 8440847382298277180}
+  animator: {fileID: 0}
 --- !u!4 &8034719448696906440 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f37257612e2fb8d4cb2029ea66f32af5, type: 3}
