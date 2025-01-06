@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 public class StartMenu : MonoBehaviour
 {
     public void PlayBtn(){
-        SceneManager.LoadSceneAsync("MainRoom");
+        SceneManager.LoadSceneAsync("StartRoom");
     }
     public void OptionsBtn(){
         SceneManager.LoadSceneAsync("OptionsMenu");
