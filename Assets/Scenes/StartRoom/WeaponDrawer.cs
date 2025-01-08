@@ -4,14 +4,14 @@ public class Drawer : MonoBehaviour
 {
     void OnMouseOver()
     {
-        UIController.actionText = "Open drawer";
-        UIController.commandText = "Open";
+        UIController.actionText = "open drawer";
+        UIController.commandKey = "E";
         UIController.uiActive = true;
     }
     void OnMouseExit()
     {
         UIController.actionText = " ";
-        UIController.commandText = " ";
+        UIController.commandKey = " ";
         UIController.uiActive = false;
     }
 }
