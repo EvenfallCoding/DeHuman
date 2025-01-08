@@ -4,9 +4,12 @@ public class Drawer : MonoBehaviour
 {
     void OnMouseOver()
     {
-        UIController.actionText = "open drawer";
-        UIController.commandKey = "E";
-        UIController.uiActive = true;
+        if (PlayerRaycast.distanceFromTarget < 4f)
+        {
+            UIController.actionText = "open drawer";
+            UIController.commandKey = "E";
+            UIController.uiActive = true;
+        }
     }
     void OnMouseExit()
     {
