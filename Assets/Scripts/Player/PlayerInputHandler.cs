@@ -1,7 +1,11 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-// codice ispirato da: https://www.youtube.com/watch?v=vBWcb_0HF1c
+// ispirato da: https://www.youtube.com/watch?v=vBWcb_0HF1c
+
+// inserire lo script in nodo/GameObject dedicato, figlio del GameObject principale del personaggio.
+
+// questo codice permette una lettura ottimale degli input.
 
 public class playerInputHandler : MonoBehaviour
 {

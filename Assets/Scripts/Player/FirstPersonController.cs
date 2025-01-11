@@ -3,6 +3,11 @@ using UnityEngine.SceneManagement;
 
 // codice ispirato da: https://www.youtube.com/watch?v=vBWcb_0HF1c
 
+// inserire lo script nel nodo principale del personaggio.
+
+// questo codice permette la gestione degli input (ottenuti da PlayerInputHandler.cs)
+// e le relative azioni, come interazioni e movimenti.
+
 public class FirstPersonController : MonoBehaviour
 {
     [Header("Movement Speeds")]
@@ -20,38 +25,37 @@ public class FirstPersonController : MonoBehaviour
     [Header("References")]
     [SerializeField] private CharacterController characterController; // inserire il modulo Character Controller
     [SerializeField] private Camera playerCamera; // inserire il nodo PlayerCamera
-    [SerializeField] private playerInputHandler playerInputHandler; // inserire /Scripts/Player/PlayerInputHandler.cs
+    [SerializeField] private playerInputHandler playerInputHandler; // inserire GameObject con /Scripts/Player/PlayerInputHandler.cs
     [SerializeField] private Animator animator; // inserire il modulo Animator
 
     private Vector3 currentMovement;
     private float verticalView;
     private float CurrentSpeed => walkSpeed * (playerInputHandler.SprintTriggered ? sprintMultiplier : 1);
 
-    void HandlePause()
-    {
-        if (Input.GetKeyDown(KeyCode.Escape)){
-            #if UNITY_STANDALONE
-                SceneManager.LoadSceneAsync("PauseMenu");
-
-            #endif
-            #if UNITY_EDITOR
-                SceneManager.LoadSceneAsync("PauseMenu");
-            #endif
-        }
-    }
-
-    void Start()
+    private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
     }
 
-    void Update()
+    private void Update()
     {
         HandleView();
         HandleMovement();
-        HandleJumping();
         HandlePause();
+    }
+
+    private void HandlePause()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            #if UNITY_STANDALONE
+                SceneManager.LoadSceneAsync("PauseMenu");
+            #endif
+            #if UNITY_EDITOR
+                SceneManager.LoadSceneAsync("PauseMenu");
+            #endif
+        }
     }
 
     private void HandleJumping()
@@ -113,6 +117,8 @@ public class FirstPersonController : MonoBehaviour
             animator.SetBool("isWalkingBackwards", true);
             characterController.Move(currentMovement * Time.deltaTime);
         }
+
+        HandleJumping();
     }
 
     private void ApplyHorizontalView(float rotationAmount)
