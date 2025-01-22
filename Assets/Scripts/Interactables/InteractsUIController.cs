@@ -9,9 +9,11 @@ public class interactsUIController : MonoBehaviour
 {
     [SerializeField] private GameObject interactionBox;
 
+    // variabili modificate da ExplorableObjects.cs e LootGiverObjects.cs
     public static bool uiActive;
     public static string commandKey;
     public static string actionText;
+
     public static bool interact;
 
     private void OpenObjectInvenctory() 

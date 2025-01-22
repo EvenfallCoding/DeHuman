@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.TextCore.Text;
 
 // ispirato da: https://www.youtube.com/watch?v=vBWcb_0HF1c
 
@@ -11,9 +12,6 @@ public class playerInputHandler : MonoBehaviour
 {
     [Header("Input Action Asset")]
     [SerializeField] private InputActionAsset playerControls; // inserire /Inputs/PlayerInput.inputactions
-
-    [Header("Action Map Name Reference")] // NOMI DELLE ACTION MAP CONTENUTE IN /Inputs/PlayerInput.inputactions
-    [SerializeField] private string characterActionMapName = "Character";
     
     [Header("Action Name References")] // NOMI DELLE ACTIONS CONTENUTE NELLE ACTION MAP
     // ACTION MAP: Character
@@ -43,15 +41,15 @@ public class playerInputHandler : MonoBehaviour
 
     private void Awake()
     {
-        InputActionMap characterMapReference = playerControls.FindActionMap(characterActionMapName);
+        InputActionMap characterActionMap = playerControls.FindActionMap("Character");
 
-        movementAction = characterMapReference.FindAction(movement);
-        viewAction = characterMapReference.FindAction(view);
-        jumpAction = characterMapReference.FindAction(jump);
-        sprintAction = characterMapReference.FindAction(sprint);
-        crouchAction = characterMapReference.FindAction(crouch);
-        interactAction = characterMapReference.FindAction(interact);
-        attackAction = characterMapReference.FindAction(attack);
+        movementAction = characterActionMap.FindAction(movement);
+        viewAction = characterActionMap.FindAction(view);
+        jumpAction = characterActionMap.FindAction(jump);
+        sprintAction = characterActionMap.FindAction(sprint);
+        crouchAction = characterActionMap.FindAction(crouch);
+        interactAction = characterActionMap.FindAction(interact);
+        attackAction = characterActionMap.FindAction(attack);
 
         SubscribeActionValuesToInputEvents();
     }
@@ -82,11 +80,11 @@ public class playerInputHandler : MonoBehaviour
 
     private void OnEnable()
     {
-        playerControls.FindActionMap(characterActionMapName).Enable();
+        playerControls.FindActionMap("Character").Enable();
     }
 
     private void OnDisable()
     {
-        playerControls.FindActionMap(characterActionMapName).Disable();
+        playerControls.FindActionMap("Character").Disable();
     }
 }
