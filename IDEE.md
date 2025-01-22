@@ -1,3 +1,7 @@
+# IDEE PER IL GIOCO
+
+----
+
 #### PRIMA SCENA:
     Occhi chiusi, sono in dormiveglia, ricordo la sua voce nel buio...
     "[dolce] Buongiorno, come ti senti oggi? [delusa] Non senti niente, vero...?".
@@ -13,9 +17,21 @@
 #### SECONDA SCENA:
     IN FASE DI SCRITTURA...
 
-
 ----
 
+### SPUNTI STORIA
+ - Il protagonista scopre informazioni riservate su alieni ed esperimenti su esseri umani (modifiche corporee, droghe, etc.).
+ - I servizi segreti lo costringono a partecipare regolarmente a combattimenti contro alieni e umani geneticamente modificati.
+ - Trova una fidanzata per cui sviluppa gradualmente un forte affetto, tuttavia:
+   - Non può rivelarle nulla perchè se dovesse farlo la sua testa esploderebbe, uccidendo sè stesso e chiunque gli sia vicino.
+ - Quando capisce di amarla è costretto a ucciderla in un livello-arena, dove lei è il boss finale.
+   - Inizialmente, combatte per egoistico istinto di sopravvivenza.
+   - Dopo averla uccisa, realizza di aver bisogno di amare qualcuno e che avrebbe dovuto fare di tutto per proteggerla.
+ - Più avanti, scopre che i resti del corpo della ragazza vengono usati per clonarla, creando un "involucro vuoto" con le sue fattezze.
+   - Questo distrugge le sue speranze in un valore intrinseco della vita, ma continua ad amare il clone come se fosse l'originale.
+ - Alla fine gli alieni conquistano la Terra?
+
+----
 
 #### Meccaniche di gioco:
  - Il giocatore deve vivere ogni arena con l'obiettivo di:
