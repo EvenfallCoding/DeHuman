@@ -27,6 +27,7 @@ public class FirstPersonController : MonoBehaviour
     [SerializeField] private Camera playerCamera; // inserire il nodo PlayerCamera
     [SerializeField] private playerInputHandler playerInputHandler; // inserire GameObject con /Scripts/Player/PlayerInputHandler.cs
     [SerializeField] private Animator animator; // inserire il modulo Animator
+    [SerializeField] private GameObject PauseMenu;
 
     private Vector3 currentMovement;
     private float verticalView;
@@ -36,6 +37,8 @@ public class FirstPersonController : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        PauseMenu.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     private void Update()
@@ -50,10 +53,12 @@ public class FirstPersonController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             #if UNITY_STANDALONE
-                SceneManager.LoadSceneAsync("PauseMenu");
+                PauseMenu.SetActive(true);
+                Time.timeScale = 0f;
             #endif
             #if UNITY_EDITOR
-                SceneManager.LoadSceneAsync("PauseMenu");
+                PauseMenu.SetActive(true);
+                Time.timeScale = 0f;
             #endif
         }
     }

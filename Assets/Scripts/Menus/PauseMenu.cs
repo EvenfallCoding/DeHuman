@@ -9,7 +9,8 @@ public class PauseMenu : MonoBehaviour
     }
     public void BackToGameBtn()
     {
-        SceneManager.LoadSceneAsync("StartRoom");
+        this.gameObject.SetActive(false);
+        Time.timeScale = 1f;
     }
 
     void Start()
