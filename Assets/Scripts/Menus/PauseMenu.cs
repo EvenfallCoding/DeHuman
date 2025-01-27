@@ -6,11 +6,15 @@ public class PauseMenu : MonoBehaviour
     public void SaveAndQuitBtn()
     {
         SceneManager.LoadSceneAsync("StartMenu");
+        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.None;
     }
     public void BackToGameBtn()
     {
-        this.gameObject.SetActive(false);
         Time.timeScale = 1f;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
+        this.gameObject.SetActive(false);
     }
 
     void Start()

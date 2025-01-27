@@ -559,10 +559,10 @@ MonoBehaviour:
     m_Value: 0
   shadowsEnd:
     m_OverrideState: 1
-    m_Value: 0.3
+    m_Value: 0.5
   highlightsStart:
     m_OverrideState: 1
-    m_Value: 0.55
+    m_Value: 0.5
   highlightsEnd:
     m_OverrideState: 1
     m_Value: 1
@@ -909,7 +909,7 @@ MonoBehaviour:
   active: 1
   intensity:
     m_OverrideState: 1
-    m_Value: 0.2
+    m_Value: 0
   xMultiplier:
     m_OverrideState: 1
     m_Value: 1
